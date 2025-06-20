@@ -84,8 +84,8 @@ end)
 
 if placeId == 286090429 then
 	RunButton.Text = "Start Arsenal Script"
-elseif placeId == 12345678 then
-	RunButton.Text = "Other Game Script"
+elseif placeId == 205224386 then
+	RunButton.Text = "start Hide and Seek script"
 else
 	RunButton.Text = "Script not found"
 end
@@ -104,8 +104,8 @@ local function CloseAndRun()
 
 	if placeId == 286090429 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/arsenalV1.lua"))()
-	elseif placeId == 12345678 then
-		loadstring(game:HttpGet("https://your-link.com/other.lua"))()
+	elseif placeId == 205224386 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/esp.lua"))()
 	else
 		warn("No scripts.")
 	end
