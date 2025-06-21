@@ -86,6 +86,8 @@ if placeId == 286090429 then
 	RunButton.Text = "Start Arsenal Script"
 elseif placeId == 205224386 then
 	RunButton.Text = "start Hide and Seek script"
+elseif placeId == 126884695634066 then
+	RunButton.Text = "start grow a garden script"
 else
 	RunButton.Text = "Script not found"
 end
@@ -106,6 +108,8 @@ local function CloseAndRun()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/arsenalV1.lua"))()
 	elseif placeId == 205224386 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/esp.lua"))()
+    elseif placeId == 126884695634066 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/Grow-a-garden.lua"))()
 	else
 		warn("No scripts.")
 	end
