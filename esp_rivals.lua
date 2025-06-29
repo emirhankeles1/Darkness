@@ -1,12 +1,61 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local RunService = game:GetService("RunService")
 
-]]--
+local FullSettings = {
+	Esp = {
+		Checks = {
+			TeamCheck = true,
+			WallCheck = false,
+			AliveCheck = true
+		},
+		Values = {
+			Enabled = true,
+			FillColor = Color3.fromRGB(255, 255, 255),
+			FillTransparency = 0.5,
+			OutlineColor = Color3.fromRGB(200, 200, 200),
+			OutlineTransparency = 0
+		}
+	}
+}
 
-local v0=game:GetService("Players");local v1=v0.LocalPlayer;local v2=game:GetService("RunService");local v3={Esp={Checks={TeamCheck=true,WallCheck=false,AliveCheck=true},Values={Enabled=true,FillColor=Color3.fromRGB(218 + 37 ,197 + 58 ,64 + 191 ),FillTransparency=0.5 + 0 ,OutlineColor=Color3.fromRGB(1077 -(282 + 595) ,1837 -(1523 + 114) ,180 + 20 ),OutlineTransparency=0 -0 }}};coroutine.wrap(function() while task.wait() do for v4,v5 in pairs(v0:GetPlayers()) do if ((v5~=v1) and v5.Character) then local v6=v5.Character:FindFirstChild("Esp");if (v3.Esp.Checks.AliveCheck and v5.Character:FindFirstChildOfClass("Humanoid") and (v5.Character.Humanoid.Health<=(1065 -(68 + 997)))) then if v6 then v6:Destroy();end continue;end if (v3.Esp.Checks.TeamCheck and v5.Character:FindFirstChild("HumanoidRootPart") and v5.Character.HumanoidRootPart:FindFirstChild("TeammateLabel")) then local v7=1270 -(226 + 1044) ;while true do if (v7==(0 -0)) then if v6 then v6:Destroy();end continue;break;end end end if  not v6 then local v8=117 -(32 + 85) ;while true do if (v8==(2 + 0)) then v6.Parent=v5.Character;break;end if (v8==(1 + 0)) then v6.RobloxLocked=true;v6.Adornee=v5.Character;v8=959 -(892 + 65) ;end if (v8==(0 -0)) then v6=Instance.new("Highlight");v6.Name="Esp";v8=1 -0 ;end end end if v6 then local v9=0;while true do if (1==v9) then v6.FillColor=v3.Esp.Values.FillColor;v6.FillTransparency=v3.Esp.Values.FillTransparency;v9=3 -1 ;end if (v9==0) then v6.DepthMode=(v3.Esp.Checks.WallCheck and Enum.HighlightDepthMode.Occluded) or Enum.HighlightDepthMode.AlwaysOnTop ;v6.Enabled=v3.Esp.Values.Enabled;v9=351 -(87 + 263) ;end if (v9==(182 -(67 + 113))) then v6.OutlineColor=v3.Esp.Values.OutlineColor;v6.OutlineTransparency=v3.Esp.Values.OutlineTransparency;break;end end end end end end end)();
+-- ESP Sistemi
+coroutine.wrap(function ()
+	while task.wait() do
+		for _, v in pairs(Players:GetPlayers()) do
+			if v ~= LocalPlayer and v.Character then
+				local Esp = v.Character:FindFirstChild("Esp")
+
+				-- Sağlamlık kontrolleri
+				if FullSettings.Esp.Checks.AliveCheck and v.Character:FindFirstChildOfClass("Humanoid") and v.Character.Humanoid.Health <= 0 then  
+					if Esp then Esp:Destroy() end
+					continue 
+				end
+
+				if FullSettings.Esp.Checks.TeamCheck and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.HumanoidRootPart:FindFirstChild("TeammateLabel") then 
+					if Esp then Esp:Destroy() end
+					continue 
+				end
+
+				-- Esp yoksa ekle
+				if not Esp then
+					Esp = Instance.new("Highlight")
+					Esp.Name = "Esp"
+					Esp.RobloxLocked = true
+					Esp.Adornee = v.Character
+					Esp.Parent = v.Character
+				end
+
+				-- Ayarları uygula
+				if Esp then
+					Esp.DepthMode = FullSettings.Esp.Checks.WallCheck and Enum.HighlightDepthMode.Occluded or Enum.HighlightDepthMode.AlwaysOnTop
+					Esp.Enabled = FullSettings.Esp.Values.Enabled
+					Esp.FillColor = FullSettings.Esp.Values.FillColor
+					Esp.FillTransparency = FullSettings.Esp.Values.FillTransparency
+					Esp.OutlineColor = FullSettings.Esp.Values.OutlineColor
+					Esp.OutlineTransparency = FullSettings.Esp.Values.OutlineTransparency
+				end
+			end
+		end
+	end
+end)()
