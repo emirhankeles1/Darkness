@@ -11,7 +11,7 @@ local FullSettings = {
 		},
 		Values = {
 			Enabled = true,
-			FillColor = Color3.fromRGB(255, 255, 255),
+			FillColor = Color3.fromRGB(255, 0, 0),
 			FillTransparency = 0.5,
 			OutlineColor = Color3.fromRGB(200, 200, 200),
 			OutlineTransparency = 0
