@@ -83,18 +83,18 @@ isLegacyChat = TextChatService.ChatVersion == Enum.ChatVersion.LegacyChatService
 
 -- xylex & europa
 local iyassets = {
-    ["infiniteyield/assets/bindsandplugins.png"] = "rbxassetid://5147695474",
-    ["infiniteyield/assets/close.png"] = "rbxassetid://5054663650",
-    ["infiniteyield/assets/editaliases.png"] = "rbxassetid://5147488658",
-    ["infiniteyield/assets/editkeybinds.png"] = "rbxassetid://129697930",
-    ["infiniteyield/assets/edittheme.png"] = "rbxassetid://4911962991",
-    ["infiniteyield/assets/editwaypoints.png"] = "rbxassetid://5147488592",
-    ["infiniteyield/assets/imgstudiopluginlogo.png"] = "rbxassetid://4113050383",
+    ["infiniteyield/assets/bindsandplugins.png"] = "",
+    ["infiniteyield/assets/close.png"] = "",
+    ["infiniteyield/assets/editaliases.png"] = "",
+    ["infiniteyield/assets/editkeybinds.png"] = "",
+    ["infiniteyield/assets/edittheme.png"] = "",
+    ["infiniteyield/assets/editwaypoints.png"] = "",
+    ["infiniteyield/assets/imgstudiopluginlogo.png"] = "",
     ["infiniteyield/assets/logo.png"] = "",
-    ["infiniteyield/assets/minimize.png"] = "rbxassetid://2406617031",
-    ["infiniteyield/assets/pin.png"] = "rbxassetid://6234691350",
-    ["infiniteyield/assets/reference.png"] = "rbxassetid://3523243755",
-    ["infiniteyield/assets/settings.png"] = "rbxassetid://1204397029"
+    ["infiniteyield/assets/minimize.png"] = "",
+    ["infiniteyield/assets/pin.png"] = "",
+    ["infiniteyield/assets/reference.png"] = "",
+    ["infiniteyield/assets/settings.png"] = ""
 }
 
 local function getcustomasset(asset)
