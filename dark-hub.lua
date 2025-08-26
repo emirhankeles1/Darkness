@@ -109,7 +109,7 @@ local function CloseAndRun()
 	end)
 
 	if placeId == 286090429 then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/arsenal-V2.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Dbdbdj/refs/heads/main/Admin.lua"))()
 	elseif placeId == 205224386 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/esp.lua"))()
     elseif placeId == 126884695634066 then
