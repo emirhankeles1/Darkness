@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/emirhankeles1/Darkness/refs/heads/main/FE-Sandevistan_V6.lua"))()
